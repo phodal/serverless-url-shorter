@@ -1,12 +1,4 @@
-'use strict';
-
-// Example of lambda function using nunjucks template
-// https://github.com/guardian/ses-send-email-lambda/blob/master/src/index.js
-
-// Related interesting reads
-// https://medium.com/engineers-optimizely/using-serverless-to-simplify-and-automate-aws-lambda-442addd80d72
-
-const base_page = `<html>
+<html>
   <head>
     <title>Phodal's URL Shorter</title>
     <link href="https://cdn.bootcss.com/pure/1.0.0/pure-nr-min.css" rel="stylesheet">
@@ -26,17 +18,4 @@ const base_page = `<html>
       </div>
     </div>
   </body>
-</html>`
-
-module.exports.handler = (event, context, callback) => {
-  console.log(JSON.stringify(event));
-
-  callback(
-    null,
-    {
-      statusCode: 200,
-      body: base_page,
-      headers: {'Content-Type': 'text/html'},
-    }
-  );
-}
+</html>
